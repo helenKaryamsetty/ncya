@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "deploy:pages": "npx wrangler pages deploy dist/ncya/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:ncya": "node dist/ncya/server/server.mjs"

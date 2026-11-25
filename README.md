@@ -24,20 +24,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Deploy to Cloudflare Pages
-
-This project is configured for a static Cloudflare Pages deployment. The Angular build generates the site in `dist/ncya/browser`; the Express SSR server is not required to host the current site.
-
-For Git-based deployment, create a Cloudflare Pages project connected to this repository. Use `npm run build` as the build command and `dist/ncya/browser` as the build output directory. The `wrangler.jsonc` file records the same Pages output directory, and `public/_redirects` keeps client-side routes working.
-
-To deploy from the command line after building, run:
-
-```sh
-npx wrangler pages deploy dist/ncya/browser --project-name ncya
-```
-
-Cloudflare will prompt you to authenticate and select or create the Pages project the first time.
-
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
