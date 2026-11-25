@@ -24,6 +24,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
+## Deploy to Cloudflare Workers
+
+Use Node.js 22 or newer for Wrangler. Run `npm run build` first, then run `npx wrangler deploy`. Wrangler serves the production files in `dist/ncya/browser` and falls back to `index.html` for client-side routes.
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).

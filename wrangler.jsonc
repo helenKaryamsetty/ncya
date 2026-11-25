@@ -1,6 +1,8 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "ncya",
-  "compatibility_date": "2026-11-26",
-  "pages_build_output_dir": "./dist/ncya/browser"
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./dist/ncya/browser",
+    "not_found_handling": "single-page-application"
+  }
 }
