@@ -36,32 +36,26 @@
 </section>
 
 <section class="prayer section-pad" id="talk">
-  <div class="wrap prayer-grid">
-    <div class="reveal">
-      <p class="section-kicker"><span>02 / YOU ARE NOT ALONE</span></p>
-      <h2>LET'S <em>TALK.</em></h2>
-      <p>Need prayer, want to talk, or just want to say hello? Start a conversation below. You don't have to have the perfect words.</p>
-      <div class="qr-row">
-        <a [href]="letsTalkUrl" target="_blank" rel="noopener noreferrer" aria-label="Open the Let's Talk form">
-          <img *ngIf="letsTalkQrUrl" [src]="letsTalkQrUrl" alt="QR code linking to the Let's Talk form" width="100" height="100">
-        </a>
-        <div><strong>TAKE THIS WITH YOU</strong><span>Scan to open the Let's Talk form.</span></div>
+  <div class="wrap">
+    <div class="prayer-card reveal" id="say-hello">
+      <div class="prayer-copy">
+        <p class="section-kicker"><span>02 / YOU ARE NOT ALONE</span></p>
+        <h2>LET'S <em>TALK.</em></h2>
+        <p>Need prayer, want to talk, or just want to say hello? You don't have to have the perfect words.</p>
+        <ul class="prayer-promises" aria-label="You can reach out for">
+          <li>Prayer</li>
+          <li>A listening ear</li>
+          <li>A simple hello</li>
+        </ul>
       </div>
-    </div>
-    <div class="message-panel reveal reveal-delay-2" id="say-hello">
-      <span class="mini-label cyan">LET'S START A CONVERSATION</span>
-      <h3>What's on your mind?</h3>
-      <label for="topic">I'm here for</label>
-      <select id="topic" [(ngModel)]="topic">
-        <option>I am new here</option>
-        <option>Let’s talk</option>
-        <option>I would like to join a WhatsApp group</option>
-      </select>
-      <label for="message">Your message</label>
-      <textarea id="message" [(ngModel)]="message" rows="4" placeholder="Share as much or as little as you like..."></textarea>
-      <a class="button button-pink message-button" [href]="letsTalkUrl" target="_blank" rel="noopener noreferrer">Open Let's Talk form <lucide-icon [img]="ArrowUpRight" size="18"></lucide-icon></a>
-      <a class="button button-outline message-button" [href]="whatsappUrl" target="_blank" rel="noopener noreferrer">Continue to WhatsApp <lucide-icon [img]="ArrowUpRight" size="18"></lucide-icon></a>
-      <p class="form-note">WhatsApp will open so you can choose who to send your message to. Please avoid sharing sensitive information unless you're comfortable.</p>
+      <div class="prayer-action">
+        <p class="mini-label">WHENEVER YOU'RE READY</p>
+        <a class="qr-link" [href]="letsTalkUrl" target="_blank" rel="noopener noreferrer" aria-label="Open the Let's Talk form">
+          <img *ngIf="letsTalkQrUrl" [src]="letsTalkQrUrl" alt="QR code linking to the Let's Talk form" width="140" height="140">
+        </a>
+        <div class="qr-caption"><strong>TAKE THIS WITH YOU</strong><span>Scan to open the Let's Talk form.</span></div>
+        <a class="button button-pink talk-button" [href]="letsTalkUrl" target="_blank" rel="noopener noreferrer">I'm ready <lucide-icon [img]="ArrowUpRight" size="18"></lucide-icon></a>
+      </div>
     </div>
   </div>
 </section>

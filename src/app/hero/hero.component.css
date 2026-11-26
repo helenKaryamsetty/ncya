@@ -17,7 +17,7 @@
 }
 .brand-logo {
   display: block;
-  width: 170px;
+  width: 150px;
   height: auto;
   object-fit: contain;
 }
@@ -264,7 +264,7 @@
     padding: 0 18px;
   }
   .brand-logo {
-    width: 130px;
+    width: 110px;
   }
   .header-cta {
     font-size: 9px;

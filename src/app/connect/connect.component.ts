@@ -1,12 +1,11 @@
 import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, OnInit, PLATFORM_ID, ViewEncapsulation } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { ArrowUpRight, CalendarDays, Church, Heart, Instagram, LucideAngularModule, MessageCircle, Users, UserRound } from 'lucide-angular';
 
 @Component({
   selector: 'app-connect',
   standalone: true,
-  imports: [CommonModule, FormsModule, LucideAngularModule],
+  imports: [CommonModule, LucideAngularModule],
   templateUrl: './connect.component.html',
   styleUrl: './connect.component.css',
   encapsulation: ViewEncapsulation.None,
@@ -20,8 +19,6 @@ export class ConnectComponent implements OnInit {
   readonly MessageCircle = MessageCircle;
   readonly Users = Users;
   readonly UserRound = UserRound;
-  topic = 'Prayer request';
-  message = '';
   readonly letsTalkUrl = 'https://script.google.com/macros/s/AKfycbwFjlPRikMT5km7OU4WpNRRcb6GSXI21grbF4po8_CinZdClFdCNqn4GLXQfthtxxb_/exec';
   letsTalkQrUrl = '';
 
@@ -31,10 +28,5 @@ export class ConnectComponent implements OnInit {
     if (isPlatformBrowser(this.platformId)) {
       this.letsTalkQrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(this.letsTalkUrl);
     }
-  }
-
-  get whatsappUrl(): string {
-    const text = `Hi NCYA! ${this.topic}.${this.message.trim() ? '\n\n' + this.message.trim() : ''}`;
-    return 'https://wa.me/?text=' + encodeURIComponent(text);
   }
 }
