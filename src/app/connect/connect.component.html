@@ -1,31 +1,31 @@
 <section class="connect section-pad" id="connect">
   <span class="glow-blob blob-purple" aria-hidden="true"></span>
   <div class="wrap">
-    <p class="section-kicker reveal"><span>03 / FIND YOUR PEOPLE</span><span>THERE'S A PLACE FOR YOU HERE <span class="spin-sparkle">✳</span></span></p>
+    <p class="section-kicker reveal"><span>01 / FIND YOUR PEOPLE</span><span>THERE'S A PLACE FOR YOU HERE <span class="spin-sparkle">✳</span></span></p>
     <div class="connect-heading reveal">
       <div><h2>LET'S <em>CONNECT.</em></h2><p>New around here? Start wherever feels right.</p></div>
       <span class="heading-star spin-sparkle">✳</span>
     </div>
     <div class="connect-grid">
-      <a class="connect-card card-pink reveal" href="#say-hello" (click)="topic = 'I am new here'">
+      <a class="connect-card card-pink reveal" href="https://docs.google.com/forms/d/e/1FAIpQLSeCLv2BY2AOrMllBedtQHckTf2iQbL7K2LXtK_53CDBCu4zuw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
         <div class="card-top"><lucide-icon [img]="UserRound" size="28"></lucide-icon><lucide-icon [img]="ArrowUpRight" size="20"></lucide-icon></div>
         <div><span>01 / START HERE</span><h3>New visitors</h3><p>First time? We would love to meet you.</p></div>
       </a>
-      <a class="connect-card card-blue reveal reveal-delay-1" href="#say-hello" (click)="topic = 'Let’s talk'">
+      <a class="connect-card card-blue reveal reveal-delay-1" href="https://docs.google.com/forms/d/e/1FAIpQLSc4NB17-EyTHnvYe1qPgl6VBSJrNO_LVpm2h5997qkCEALkeA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
         <div class="card-top"><lucide-icon [img]="MessageCircle" size="28"></lucide-icon><lucide-icon [img]="ArrowUpRight" size="20"></lucide-icon></div>
-        <div><span>02 / WE'RE LISTENING</span><h3>Let's talk</h3><p>Have a question? Let's chat.</p></div>
+        <div><span>02 / FIND YOUR GROUP</span><h3>WhatsApp groups</h3><p>Ask us about finding your people.</p></div>
       </a>
-      <a class="connect-card card-purple reveal reveal-delay-2" href="#church">
-        <div class="card-top"><lucide-icon [img]="Church" size="28"></lucide-icon><lucide-icon [img]="ArrowUpRight" size="20"></lucide-icon></div>
-        <div><span>03 / OUR HOME</span><h3>Our church</h3><p>Get to know New City Church.</p></div>
-      </a>
-      <a class="connect-card card-orange reveal reveal-delay-3" href="https://www.instagram.com/ncyahyd/" target="_blank" rel="noopener noreferrer">
+      <a class="connect-card card-orange reveal reveal-delay-2" href="https://www.instagram.com/ncyahyd/" target="_blank" rel="noopener noreferrer">
         <div class="card-top"><lucide-icon [img]="Instagram" size="28"></lucide-icon><lucide-icon [img]="ArrowUpRight" size="20"></lucide-icon></div>
-        <div><span>04 / FOLLOW ALONG</span><h3>Instagram</h3><p>See what’s happening with NCYA.</p></div>
+        <div><span>03 / FOLLOW ALONG</span><h3>Instagram</h3><p>See what’s happening with NCYA.</p></div>
       </a>
-      <a class="connect-card card-green reveal reveal-delay-4" href="https://whatsapp.com/channel/0029Vah3aZC5K3zb9cnBnS40" target="_blank" rel="noopener noreferrer">
+      <a class="connect-card card-green reveal reveal-delay-3" href="https://whatsapp.com/channel/0029Vah3aZC5K3zb9cnBnS40" target="_blank" rel="noopener noreferrer">
         <div class="card-top"><lucide-icon [img]="MessageCircle" size="28"></lucide-icon><lucide-icon [img]="ArrowUpRight" size="20"></lucide-icon></div>
-        <div><span>05 / STAY IN THE LOOP</span><h3>WhatsApp channel</h3><p>Get updates from New City Church.</p></div>
+        <div><span>04 / STAY IN THE LOOP</span><h3>WhatsApp channel</h3><p>Get updates from New City Church.</p></div>
+      </a>
+      <a class="connect-card card-purple reveal reveal-delay-4" href="https://www.newcitychurch.in/about-us" target="_blank" rel="noopener noreferrer">
+        <div class="card-top"><lucide-icon [img]="Church" size="28"></lucide-icon><lucide-icon [img]="ArrowUpRight" size="20"></lucide-icon></div>
+        <div><span>05 / OUR HOME</span><h3>Our church</h3><p>Get to know New City Church.</p></div>
       </a>
       <a class="connect-card card-blue reveal reveal-delay-5" href="https://www.covenantmatch.in/" target="_blank" rel="noopener noreferrer">
         <div class="card-top"><lucide-icon [img]="Heart" size="28"></lucide-icon><lucide-icon [img]="ArrowUpRight" size="20"></lucide-icon></div>
@@ -35,15 +35,17 @@
   </div>
 </section>
 
-<section class="prayer section-pad" id="prayer">
+<section class="prayer section-pad" id="talk">
   <div class="wrap prayer-grid">
     <div class="reveal">
-      <p class="section-kicker"><span>04 / YOU ARE NOT ALONE</span></p>
-      <h2>WE'RE IN<br>YOUR <em>CORNER.</em></h2>
+      <p class="section-kicker"><span>02 / YOU ARE NOT ALONE</span></p>
+      <h2>LET'S <em>TALK.</em></h2>
       <p>Need prayer, want to talk, or just want to say hello? Start a conversation below. You don't have to have the perfect words.</p>
       <div class="qr-row">
-        <img *ngIf="prayerQrUrl" [src]="prayerQrUrl" alt="QR code linking to the prayer request section" width="100" height="100">
-        <div><strong>TAKE THIS WITH YOU</strong><span>Scan to return to prayer requests.</span></div>
+        <a [href]="letsTalkUrl" target="_blank" rel="noopener noreferrer" aria-label="Open the Let's Talk form">
+          <img *ngIf="letsTalkQrUrl" [src]="letsTalkQrUrl" alt="QR code linking to the Let's Talk form" width="100" height="100">
+        </a>
+        <div><strong>TAKE THIS WITH YOU</strong><span>Scan to open the Let's Talk form.</span></div>
       </div>
     </div>
     <div class="message-panel reveal reveal-delay-2" id="say-hello">
@@ -53,26 +55,14 @@
       <select id="topic" [(ngModel)]="topic">
         <option>I am new here</option>
         <option>Let’s talk</option>
+        <option>I would like to join a WhatsApp group</option>
       </select>
       <label for="message">Your message</label>
       <textarea id="message" [(ngModel)]="message" rows="4" placeholder="Share as much or as little as you like..."></textarea>
-      <a class="button button-pink message-button" [href]="whatsappUrl" target="_blank" rel="noopener noreferrer">Continue to WhatsApp <lucide-icon [img]="ArrowUpRight" size="18"></lucide-icon></a>
+      <a class="button button-pink message-button" [href]="letsTalkUrl" target="_blank" rel="noopener noreferrer">Open Let's Talk form <lucide-icon [img]="ArrowUpRight" size="18"></lucide-icon></a>
+      <a class="button button-outline message-button" [href]="whatsappUrl" target="_blank" rel="noopener noreferrer">Continue to WhatsApp <lucide-icon [img]="ArrowUpRight" size="18"></lucide-icon></a>
       <p class="form-note">WhatsApp will open so you can choose who to send your message to. Please avoid sharing sensitive information unless you're comfortable.</p>
     </div>
   </div>
 </section>
 
-<section class="church-band" id="church">
-  <div class="wrap church-inner reveal">
-    <div><span class="mini-label cyan">A LITTLE ABOUT OUR HOME</span><h2>NEW CITY <em>CHURCH.</em></h2><p>NCYA is the young adults community of New City Church: a place to explore faith, build friendships, and do life together.</p></div>
-    <a class="button button-outline" href="#say-hello" (click)="topic = 'Let’s talk'">Ask us more <lucide-icon [img]="ArrowUpRight" size="18"></lucide-icon></a>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap footer-inner">
-    <div><a class="footer-brand" href="#home">NCYA<span class="spin-sparkle">✳</span></a><p>NEW CITY YOUNG ADULTS</p></div>
-    <p>FAITH. FRIENDS. REAL LIFE.</p>
-    <a href="#home">BACK TO THE TOP ↑</a>
-  </div>
-</footer>

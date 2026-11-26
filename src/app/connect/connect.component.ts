@@ -22,15 +22,14 @@ export class ConnectComponent implements OnInit {
   readonly UserRound = UserRound;
   topic = 'Prayer request';
   message = '';
-  prayerQrUrl = '';
+  readonly letsTalkUrl = 'https://script.google.com/macros/s/AKfycbwFjlPRikMT5km7OU4WpNRRcb6GSXI21grbF4po8_CinZdClFdCNqn4GLXQfthtxxb_/exec';
+  letsTalkQrUrl = '';
 
   constructor(@Inject(PLATFORM_ID) private platformId: object, @Inject(DOCUMENT) private document: Document) {}
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-      const url = new URL(this.document.location.href);
-      url.hash = 'prayer';
-      this.prayerQrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(url.toString());
+      this.letsTalkQrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(this.letsTalkUrl);
     }
   }
 
