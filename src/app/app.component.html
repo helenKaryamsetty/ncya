@@ -19,7 +19,7 @@
         <div class="form-fields">
           <label class="field-full">Full name<input name="name" [(ngModel)]="visitor.name" required maxlength="100" autocomplete="name" placeholder="Your name"></label>
           <label>Age<input name="age" [(ngModel)]="visitor.age" type="number" min="1" max="120" inputmode="numeric" placeholder="Your age"></label>
-          <label>Gender<select name="gender" [(ngModel)]="visitor.gender"><option value="">Select gender</option><option>Female</option><option>Male</option><option>Non-binary</option><option>Other</option><option>Prefer not to say</option></select></label>
+          <label>Gender<select name="gender" [(ngModel)]="visitor.gender"><option value="">Select gender</option><option>Female</option><option>Male</option><option>Other</option></select></label>
           <label class="field-full">Phone number<input name="phone" [(ngModel)]="visitor.phone" type="tel" required pattern="[6-9][0-9]{9}" maxlength="10" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit mobile number"><small>Please enter a 10-digit mobile number</small></label>
           <label class="field-full">Email address<input name="email" [(ngModel)]="visitor.email" type="email" email maxlength="254" autocomplete="email" placeholder="you@example.com"></label>
         </div>

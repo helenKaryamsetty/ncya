@@ -1,4 +1,4 @@
-const genders = ['Female', 'Male', 'Non-binary', 'Other', 'Prefer not to say'];
+const genders = ['Female', 'Male', 'Other'];
 
 export default {
   async fetch(request, env) {
