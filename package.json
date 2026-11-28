@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:worker": "npx --yes --package=node@22 --package=wrangler wrangler dev --local --ip 127.0.0.1 --port 8799",
     "build": "ng build",
     "deploy:pages": "npx wrangler pages deploy dist/ncya/browser",
     "watch": "ng build --watch --configuration development",

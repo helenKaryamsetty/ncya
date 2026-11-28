@@ -1,7 +1,13 @@
 {
   "name": "ncya",
   "compatibility_date": "2025-09-01",
+  "main": "worker.js",
+  "vars": {
+    "GOOGLE_SCRIPT_URL": "https://script.google.com/macros/s/AKfycbyVA0f65d6h5KGHdSPBg6BKVldW49W0NOboYCjvwEZYOZ1TJU3UIPw31vcCvPjMJAAc/exec"
+  },
   "assets": {
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"],
     "directory": "./dist/ncya/browser",
     "not_found_handling": "single-page-application"
   }

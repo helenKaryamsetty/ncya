@@ -94,8 +94,8 @@
 }
 .hero {
   min-height: 720px;
-  height: 94vh;
-  max-height: 900px;
+  height: 100svh;
+  max-height: 980px;
   position: relative;
   display: flex;
   align-items: center;
@@ -251,7 +251,7 @@
     display: flex;
   }
   .hero {
-    height: 85vh;
+    height: 100svh;
     min-height: 650px;
   }
   .hero-image {

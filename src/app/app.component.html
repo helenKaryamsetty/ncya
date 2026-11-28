@@ -1,3 +1,36 @@
+<main class="registration" *ngIf="!registered">
+  <div class="registration-inner">
+    <img class="registration-logo" src="/assets/NCYA%20Geometric%20White%20Logo.png" alt="NCYA, New City Young Adults" width="150" height="50">
+    <div class="registration-grid">
+      <div class="registration-intro">
+        <p class="registration-kicker">NEW CITY YOUNG ADULTS <span>✳</span> YOU'RE INVITED</p>
+        <h1>NCYA<br><em>NIGHTS.</em></h1>
+        <p class="registration-copy">Your Sunday Got Better. Good people. Big faith. Real conversations. Your place is waiting.</p>
+        <div class="registration-event">
+          <span>EVERY SUNDAY NIGHT</span>
+          <strong>6:30 <span>PM</span></strong>
+          <small>New City Learning Center</small>
+        </div>
+      </div>
+      <form class="registration-form" #registrationForm="ngForm" (ngSubmit)="register(registrationForm)">
+        <p class="form-kicker">FIRST THINGS FIRST</p>
+        <h2>LET'S GET TO<br><em>KNOW YOU.</em></h2>
+        <p class="form-copy">Tell us a little about yourself and come on in.</p>
+        <div class="form-fields">
+          <label class="field-full">Full name<input name="name" [(ngModel)]="visitor.name" required maxlength="100" autocomplete="name" placeholder="Your name"></label>
+          <label>Age<input name="age" [(ngModel)]="visitor.age" type="number" min="1" max="120" inputmode="numeric" placeholder="Your age"></label>
+          <label>Gender<select name="gender" [(ngModel)]="visitor.gender"><option value="">Select gender</option><option>Female</option><option>Male</option><option>Non-binary</option><option>Other</option><option>Prefer not to say</option></select></label>
+          <label class="field-full">Phone number<input name="phone" [(ngModel)]="visitor.phone" type="tel" required pattern="[6-9][0-9]{9}" maxlength="10" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit mobile number"><small>Please enter a 10-digit mobile number</small></label>
+          <label class="field-full">Email address<input name="email" [(ngModel)]="visitor.email" type="email" email maxlength="254" autocomplete="email" placeholder="you@example.com"></label>
+        </div>
+        <p class="registration-error" *ngIf="error" role="alert">{{ error }}</p>
+        <button class="registration-submit" type="submit" [disabled]="registrationForm.invalid || submitting">{{ submitting ? 'SAVING YOUR DETAILS...' : 'PROCEED' }} <span aria-hidden="true">↗</span></button>
+        <p class="registration-privacy">Your details will be shared with the NCYA team to help us connect with you.</p>
+      </form>
+    </div>
+  </div>
+</main>
+<ng-container *ngIf="registered">
 <div class="sparkle-field" aria-hidden="true">
   <span
     class="spark"
@@ -24,3 +57,4 @@
   <app-connect />
   <app-community />
 </main>
+</ng-container>
